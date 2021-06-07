@@ -1,14 +1,12 @@
-// import the sequelize constructor from the library
 const Sequelize = require("sequelize");
 
-// load local environment variables
 require("dotenv").config();
 
-// create connection to our database
+// create connection to our db
 const sequelize = new Sequelize(
-  "process.env.DB_NAME",
-  "process.env.DB_USER",
-  "process.env.DB_PW",
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PW,
   {
     host: "localhost",
     dialect: "mysql",
